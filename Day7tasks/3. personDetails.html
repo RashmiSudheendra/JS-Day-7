@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Person {
+        constructor(name, age, gender, occupation) {
+          (this.name = name),
+            (this.age = age),
+            (this.gender = gender),
+            (this.occupation = occupation);
+        }
+      }
+
+      var person1 = new Person("Rashmi", 25, "Female", "HR");
+      console.log(
+        `my name is ${person1.name}, am ${person1.age} years old and I work as ${person1.occupation}`
+      );
+      person1.name = "Ramya";
+      console.log(
+        `my name is ${person1.name}, am ${person1.age} years ols and I work as ${person1.occupation}`
+      );
+    </script>
+  </body>
+</html>

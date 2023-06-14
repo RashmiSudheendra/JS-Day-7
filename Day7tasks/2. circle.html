@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circle</title>
+  </head>
+  <body>
+    <script>
+      class Circle {
+        constructor(radius, color) {
+          this.radius = radius;
+          this.color = color;
+        }
+        getRadius() {
+          return `Radius : ${this.radius}`;
+        }
+        getColor() {
+          return `Color : ${this.color}`;
+        }
+        setRadius() {
+          var newradius = prompt("Enter new radius");
+          if (newradius == null) {
+            newradius = this.radius;
+            return `Updated Radius : ${newradius}`;
+          } else {
+            return `Updated Radius : ${newradius}`;
+          }
+        }
+        setColor() {
+          var newcolor = prompt("Enter new color");
+          if (newcolor == null) {
+            return `Updated Color : ${this.color}`;
+          } else {
+            return `Updated Color : ${newcolor}`;
+          }
+        }
+        getArea() {
+          var area;
+          if (this.radius == 0) {
+            var r = prompt("Please enter Radius");
+            area = 3.142 * (r * r);
+            console.log(`Area of circle is ${area}`);
+          } else {
+            area = 3.142 * (this.radius * this.radius);
+            console.log(`Area of circle is ${area}`);
+          }
+        }
+        getCircumference() {
+          var circumference;
+          if (this.radius == 0) {
+            var r = prompt("Please enter Radius");
+            circumference = 2 * 3.142 * r;
+            console.log(`Circumference of circle is ${circumference}`);
+          } else {
+            circumference = 2 * 3.142 * this.radius;
+            console.log(`Circumference of circle is ${circumference}`);
+          }
+        }
+      }
+      var circle1 = new Circle(1.0, "red");
+      console.log(circle1.getRadius());
+      console.log(circle1.getColor());
+      console.log(circle1.setRadius());
+      console.log(circle1.setColor());
+      console.log(circle1.getArea());
+      console.log(circle1.getCircumference());
+
+      var circle2 = new Circle("", "red");
+      console.log(circle2.getArea());
+      console.log(circle2.getCircumference());
+    </script>
+  </body>
+</html>
